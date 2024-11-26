@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>7a7c3f71-9d30-4b54-a6a4-6d687a5e58b4</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\**" />
+    <Compile Remove="FlagExplorer.Controller\**" />
+    <Compile Remove="FlagExplorer.Core\**" />
+    <Compile Remove="FlagExplorer.Service\**" />
+    <Compile Remove="FlagExplorer.Tests\**" />
+    <Compile Remove="src\**" />
+    <Content Remove="Controllers\**" />
+    <Content Remove="FlagExplorer.Controller\**" />
+    <Content Remove="FlagExplorer.Core\**" />
+    <Content Remove="FlagExplorer.Service\**" />
+    <Content Remove="FlagExplorer.Tests\**" />
+    <Content Remove="src\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <EmbeddedResource Remove="FlagExplorer.Controller\**" />
+    <EmbeddedResource Remove="FlagExplorer.Core\**" />
+    <EmbeddedResource Remove="FlagExplorer.Service\**" />
+    <EmbeddedResource Remove="FlagExplorer.Tests\**" />
+    <EmbeddedResource Remove="src\**" />
+    <None Remove="Controllers\**" />
+    <None Remove="FlagExplorer.Controller\**" />
+    <None Remove="FlagExplorer.Core\**" />
+    <None Remove="FlagExplorer.Service\**" />
+    <None Remove="FlagExplorer.Tests\**" />
+    <None Remove="src\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlagExplorer.Controller\FlagExplorer.Controller.csproj" />
+    <ProjectReference Include="..\FlagExplorer.Core\FlagExplorer.Core.csproj" />
+    <ProjectReference Include="..\FlagExplorer.Service\FlagExplorer.Service.csproj" />
+  </ItemGroup>
+
+</Project>

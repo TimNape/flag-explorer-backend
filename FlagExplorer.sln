@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagExplorer", "FlagExplorer.csproj", "{6A826223-8956-45E3-860E-62E4631D141C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagExplorer.Core", "FlagExplorer.Core\FlagExplorer.Core.csproj", "{1D09438F-5636-490B-9E09-FF54A6F5B823}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagExplorer.Controller", "FlagExplorer.Controller\FlagExplorer.Controller.csproj", "{E4ECAFB7-585A-4A11-A7E8-470F8A94E12C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagExplorer.Service", "FlagExplorer.Service\FlagExplorer.Service.csproj", "{526C503B-E691-4013-BD2A-59728D278654}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagExplorer.Tests", "FlagExplorer.Tests\FlagExplorer.Tests.csproj", "{CC8C5116-3D56-4CE1-A831-8E5630912CDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlagExplorer.WebAPI", "FlagExplorer.WebApi\FlagExplorer.WebAPI.csproj", "{E6F16684-1D93-4888-B8F9-7F440EC4007A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6A826223-8956-45E3-860E-62E4631D141C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A826223-8956-45E3-860E-62E4631D141C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A826223-8956-45E3-860E-62E4631D141C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A826223-8956-45E3-860E-62E4631D141C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D09438F-5636-490B-9E09-FF54A6F5B823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D09438F-5636-490B-9E09-FF54A6F5B823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D09438F-5636-490B-9E09-FF54A6F5B823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D09438F-5636-490B-9E09-FF54A6F5B823}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4ECAFB7-585A-4A11-A7E8-470F8A94E12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4ECAFB7-585A-4A11-A7E8-470F8A94E12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4ECAFB7-585A-4A11-A7E8-470F8A94E12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4ECAFB7-585A-4A11-A7E8-470F8A94E12C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{526C503B-E691-4013-BD2A-59728D278654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{526C503B-E691-4013-BD2A-59728D278654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{526C503B-E691-4013-BD2A-59728D278654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{526C503B-E691-4013-BD2A-59728D278654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8C5116-3D56-4CE1-A831-8E5630912CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8C5116-3D56-4CE1-A831-8E5630912CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8C5116-3D56-4CE1-A831-8E5630912CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8C5116-3D56-4CE1-A831-8E5630912CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6F16684-1D93-4888-B8F9-7F440EC4007A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6F16684-1D93-4888-B8F9-7F440EC4007A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6F16684-1D93-4888-B8F9-7F440EC4007A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6F16684-1D93-4888-B8F9-7F440EC4007A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
