@@ -2,6 +2,7 @@ using FlagExplorer.Core.Interfaces;
 using FlagExplorer.Service.Interfaces;
 using FlagExplorer.Service.Services;
 using FlagExplorer.Service.Shared;
+using FlagExplorer.WebAPI.Repositories;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 
@@ -34,7 +35,8 @@ builder.Services.AddSwaggerGen(
 );
 
 // Service registration
-
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+builder.Services.AddScoped<ICountryService, CountryService>();
 
 var app = builder.Build();
 
