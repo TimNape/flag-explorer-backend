@@ -1,6 +1,5 @@
-﻿using AutoMapper;
+using AutoMapper;
 using FlagExplorer.Core.Entities;
-using FlagExplorer.Service.DTOs;
 
 namespace FlagExplorer.Service.Shared
 {

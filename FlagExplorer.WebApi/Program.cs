@@ -2,7 +2,6 @@ using FlagExplorer.Core.Interfaces;
 using FlagExplorer.Service.Interfaces;
 using FlagExplorer.Service.Services;
 using FlagExplorer.Service.Shared;
-using FlagExplorer.WebAPI.Repositories;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 
