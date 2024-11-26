@@ -1,5 +1,6 @@
 using AutoMapper;
 using FlagExplorer.Core.Entities;
+using FlagExplorer.Service.DTOs;
 
 namespace FlagExplorer.Service.Shared
 {
@@ -7,6 +8,8 @@ namespace FlagExplorer.Service.Shared
     {
         public AutoMapperProfile()
         {
+            CreateMap<Country, CountryReadDto>();
+            CreateMap<CountryDetails, CountryDetailsReadDto>();
         }
     }
 }
