@@ -1,10 +1,11 @@
 ﻿using FlagExplorer.Core.Common;
+using FlagExplorer.Core.Entities;
 using FlagExplorer.Service.DTOs;
 
 namespace FlagExplorer.Service.Interfaces
 {
     public interface ICountryService : IReadOnlyBaseService<CountryReadDto, QueryOptions>
     {
-        Task<IEnumerable<CountryReadDto>> GetByNameAsync(string countryName);
+        Task<CountryDetails> GetByNameAsync(string countryName);
     }
 }

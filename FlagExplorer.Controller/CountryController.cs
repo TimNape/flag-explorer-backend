@@ -27,25 +27,15 @@ namespace FlagExplorer.Controller
             return Ok(countries);
         }
 
-        [HttpGet("{countryId}")]
-        [AllowAnonymous]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<CountryDetailsReadDto>> GetCountryByNameAsync([FromRoute] Guid countryId)
-        {
-            var country = await _countryService.GetOneByIdAsync(countryId);
-            return Ok(country);
-        }
-
-        [HttpGet("search/{countryName}")]
+        [HttpGet("{countryName}")]
         [AllowAnonymous]
         [ActionName(nameof(GetCountriesByNameAsync))]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IEnumerable<CountryDetailsReadDto>>> GetCountriesByNameAsync([FromRoute] string countryName, [FromQuery] QueryOptions options)
+        public async Task<ActionResult<IEnumerable<CountryDetailsReadDto>>> GetCountriesByNameAsync([FromRoute] string countryName)
         {
-            var country = await _countryService.GetByNameAsync(countryName);
-            return Ok(country);
+            var countryDetails = await _countryService.GetByNameAsync(countryName);
+            return Ok(new CountryDetailsReadDto(countryDetails));
         }
     }
 }

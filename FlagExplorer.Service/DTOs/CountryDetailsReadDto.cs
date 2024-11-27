@@ -1,9 +1,18 @@
-﻿namespace FlagExplorer.Service.DTOs
+﻿using FlagExplorer.Core.Entities;
+
+namespace FlagExplorer.Service.DTOs
 {
     public class CountryDetailsReadDto
     {
-        public Guid Id { get; set; }
+        public CountryDetailsReadDto() { }
+
+        public CountryDetailsReadDto(CountryDetails countryDetails)
+        {
+            Population= countryDetails.Population;
+            Capital = countryDetails.Capital;
+        }
+
         public int Population { get; set; }
-        public string? CapitalCity { get; set; }
+        public string? Capital { get; set; }
     }
 }

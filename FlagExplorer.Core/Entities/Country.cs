@@ -2,6 +2,7 @@
 {
     public class Country : BaseEntity
     {
-        public string? Title { get; set; }
+        public string? Name { get; set; }
+        public string? Flag { get; set; }
     }
 }

@@ -5,6 +5,7 @@ namespace FlagExplorer.Core.Interfaces
 {
     public interface ICountryRepository : IReadOnlyBaseRepository<Country, QueryOptions>
     {
-        Task<IEnumerable<Country>> GetByNameAsync(string countryName);
+        Task<CountryDetails> GetByNameAsync(string countryName);
+        Task InitAsync();
     }
 }
