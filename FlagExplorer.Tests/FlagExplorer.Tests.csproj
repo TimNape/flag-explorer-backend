@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FlagExplorer.Core\FlagExplorer.Core.csproj" />
+    <ProjectReference Include="..\FlagExplorer.WebApi\FlagExplorer.WebAPI.csproj" />
   </ItemGroup>
 
 </Project>

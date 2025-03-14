@@ -10,6 +10,8 @@ namespace FlagExplorer.Service.Shared
         {
             CreateMap<Country, CountryReadDto>();
             CreateMap<CountryDetails, CountryDetailsReadDto>();
+
+            AutoMapperHelper.MapDtos(this);
         }
     }
 }

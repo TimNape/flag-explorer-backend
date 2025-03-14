@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿using FlagExplorer.Core.Interfaces;
+using FlagExplorer.WebAPI.Repositories;
+using Xunit;
 
 namespace FlagExplorer.Tests.WebAPI
 {
@@ -7,7 +9,9 @@ namespace FlagExplorer.Tests.WebAPI
         [Fact]
         public void Basic()
         {
-            Assert.True(true);
+            var rep = new CountryRepository();
+            var country = rep.GetByNameAsync("South Africa");
+            Assert.NotNull(country);
         }
     }
 }

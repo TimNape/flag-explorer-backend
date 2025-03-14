@@ -3,6 +3,7 @@ using FlagExplorer.Core.Interfaces;
 using FlagExplorer.Service.Interfaces;
 using FlagExplorer.Service.Services;
 using FlagExplorer.Service.Shared;
+using FlagExplorer.WebAPI;
 using FlagExplorer.WebAPI.Repositories;
 using HostInitActions;
 using Microsoft.OpenApi.Models;
@@ -84,6 +85,8 @@ builder.Services.AddAsyncServiceInitialization()
     {
         await service.InitAsync();
     });
+
+DependencyInjectionHelper.RegisterEntities(builder);
 
 var app = builder.Build();
 
