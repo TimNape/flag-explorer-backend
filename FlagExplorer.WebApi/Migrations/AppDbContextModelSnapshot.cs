@@ -35,7 +35,7 @@ namespace FlagExplorer.WebAPI.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PopulationDensity")
+                    b.Property<int?>("Population")
                         .HasColumnType("int");
 
                     b.Property<int>("PostalCode")

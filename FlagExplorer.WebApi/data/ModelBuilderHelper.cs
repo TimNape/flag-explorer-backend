@@ -1,4 +1,4 @@
-﻿//using FlagExplorer.WebAPI.Data.EntityModelBuilders;
+using FlagExplorer.WebAPI.Data.EntityModelBuilders;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlagExplorer.WebAPI.Data
@@ -7,7 +7,7 @@ namespace FlagExplorer.WebAPI.Data
     {
         public static void Configure(ModelBuilder modelBuilder)
         {
-          
+
         }
     }
 }
