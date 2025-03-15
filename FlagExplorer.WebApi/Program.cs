@@ -4,8 +4,10 @@ using FlagExplorer.Service.Interfaces;
 using FlagExplorer.Service.Services;
 using FlagExplorer.Service.Shared;
 using FlagExplorer.WebAPI;
+using FlagExplorer.WebAPI.Data;
 using FlagExplorer.WebAPI.Repositories;
 using HostInitActions;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 
@@ -63,7 +65,14 @@ builder.Services.AddSpaStaticFiles(configuration =>
     configuration.RootPath = frontEndPath!;
 });
 
-
+builder.Services.AddDbContext<AppDbContext>
+(
+    options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString(connectionStringKey!))
+           .UseLazyLoadingProxies()
+           .EnableSensitiveDataLogging()
+           .EnableDetailedErrors()
+);
 // CORS
 builder.Services.AddCors(options =>
 {
