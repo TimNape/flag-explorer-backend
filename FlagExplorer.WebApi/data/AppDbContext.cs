@@ -8,6 +8,7 @@ namespace FlagExplorer.WebAPI.Data
     {
         private readonly IConfiguration _config;
         #region DbSet
+        public DbSet<Country> CountryCtx { get; set; } = null!;
         public DbSet<Province> ProvinceCtx { get; set; } = null!;
         public DbSet<City> CityCtx { get; set; } = null!;
         public DbSet<Vehicle> VehicleCtx { get; set; } = null!;

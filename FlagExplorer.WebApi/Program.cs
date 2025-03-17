@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
@@ -18,7 +19,10 @@ builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
@@ -87,14 +91,6 @@ builder.Services.AddCors(options =>
 
 
 // Service registration
-builder.Services.AddSingleton<ICountryRepository, CountryRepository>();
-builder.Services.AddScoped<ICountryService, CountryService>();
-builder.Services.AddAsyncServiceInitialization()
-    .AddInitAction<ICountryRepository>(async (service) =>
-    {
-        await service.InitAsync();
-    });
-
 DependencyInjectionHelper.RegisterEntities(builder);
 
 var app = builder.Build();

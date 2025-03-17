@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace FlagExplorer.Controller
 {
     [ApiController]
-    [Route("api/v1/countries")]
+    [Route("api/v1/country")]
     public class CountryController : ControllerBase
     {
         private readonly ICountryService _countryService;
@@ -21,21 +21,10 @@ namespace FlagExplorer.Controller
         [HttpGet]
         [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IEnumerable<CountryReadDto>>> GetAllCountriesAsync([FromQuery] QueryOptions options)
+        public async Task<ActionResult<IEnumerable<CountryReadDto>>> GetAllCountryListAsync([FromQuery] QueryOptions options)
         {
-            var countries = await _countryService.GetAllAsync(options);
-            return Ok(countries);
-        }
-
-        [HttpGet("{countryName}")]
-        [AllowAnonymous]
-        [ActionName(nameof(GetCountriesByNameAsync))]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IEnumerable<CountryDetailsReadDto>>> GetCountriesByNameAsync([FromRoute] string countryName)
-        {
-            var countryDetails = await _countryService.GetByNameAsync(countryName);
-            return Ok(new CountryDetailsReadDto(countryDetails));
+            var countryList = await _countryService.GetAllAsync(options);
+            return Ok(countryList);
         }
     }
 }

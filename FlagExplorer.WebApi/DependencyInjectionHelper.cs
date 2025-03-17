@@ -10,6 +10,11 @@ namespace FlagExplorer.WebAPI
         public static void RegisterEntities(WebApplicationBuilder builder)
         {
 
+            // Country
+            builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+            builder.Services.AddScoped<ICountryService, CountryService>();
+
+
             // Province
             builder.Services.AddScoped<IProvinceRepository, ProvinceRepository>();
             builder.Services.AddScoped<IProvinceService, ProvinceService>();

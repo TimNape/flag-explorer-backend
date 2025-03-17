@@ -8,9 +8,10 @@ namespace FlagExplorer.Service.Shared
     {
         public static void MapDtos(Profile profile)
         {
+            profile.CreateMap<Country, CountryReadDto>();
             profile.CreateMap<Province, ProvinceReadDto>();
-profile.CreateMap<City, CityReadDto>();
-profile.CreateMap<Vehicle, VehicleReadDto>();
+            profile.CreateMap<City, CityReadDto>();
+            profile.CreateMap<Vehicle, VehicleReadDto>();
 
         }
     }

@@ -14,9 +14,5 @@ namespace FlagExplorer.Service.Services
         public CountryService(ICountryRepository countryRepository, IMapper mapper) : base(countryRepository, mapper){
             _countryRepository = countryRepository;
         }
-        Task<CountryDetails> ICountryService.GetByNameAsync(string countryName)
-        {
-            return _countryRepository.GetByNameAsync(countryName);
-        }
     }
 }
