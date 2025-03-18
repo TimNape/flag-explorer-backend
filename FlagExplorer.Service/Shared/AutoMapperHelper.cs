@@ -11,7 +11,6 @@ namespace FlagExplorer.Service.Shared
             profile.CreateMap<Country, CountryReadDto>();
             profile.CreateMap<Province, ProvinceReadDto>();
             profile.CreateMap<City, CityReadDto>();
-            profile.CreateMap<Vehicle, VehicleReadDto>();
 
         }
     }

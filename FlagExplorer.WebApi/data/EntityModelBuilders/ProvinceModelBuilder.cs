@@ -27,6 +27,16 @@ namespace FlagExplorer.WebAPI.Data.EntityModelBuilders
                 entity.Property(c => c.Population);
 
             });
+            modelBuilder.Entity<Province>()
+             .HasMany(_ => _.Cities)
+             .WithOne(_ => _.Province)
+             .HasForeignKey(_ => _.ProvinceId);
+
+            modelBuilder.Entity<Province>()
+            .HasOne(_ => _.Country)
+            .WithMany(_ => _.Provinces)
+            .HasForeignKey(_ => _.CountryId);
+
         }
 
     }

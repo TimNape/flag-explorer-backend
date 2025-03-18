@@ -24,11 +24,6 @@ namespace FlagExplorer.WebAPI
             builder.Services.AddScoped<ICityRepository, CityRepository>();
             builder.Services.AddScoped<ICityService, CityService>();
 
-
-            // Vehicle
-            builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
-            builder.Services.AddScoped<IVehicleService, VehicleService>();
-
         }
     }
 }

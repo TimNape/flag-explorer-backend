@@ -2,7 +2,11 @@
 {
     public class Country : BaseEntity
     {
-        public string? Name { get; set; }
-        public string? Flag { get; set; }
+        public virtual string? Name { get; set; }
+        public virtual string? Flag { get; set; }
+
+
+        public virtual List<Province>? Provinces { get; set; } = new();
+
     }
 }

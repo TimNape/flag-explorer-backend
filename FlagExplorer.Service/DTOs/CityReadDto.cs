@@ -2,10 +2,11 @@
 {
     public class CityReadDto
     {
-        public string? Name { get; set; }
-        public Guid? StateId { get; set; }
-        public int PostalCode { get; set; }
-        public int? Population { get; set; }
+        public virtual string? Name { get; set; }
+        public virtual Guid? ProvinceId { get; set; }
+        public virtual int PostalCode { get; set; }
+        public virtual int? Population { get; set; }
+        public virtual ProvinceReadDto? Province { get; set; }
 
     }
 }

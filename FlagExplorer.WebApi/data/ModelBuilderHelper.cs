@@ -10,7 +10,6 @@ namespace FlagExplorer.WebAPI.Data
             CountryModelBuilder.Configure(modelBuilder);
             ProvinceModelBuilder.Configure(modelBuilder);
             CityModelBuilder.Configure(modelBuilder);
-            VehicleModelBuilder.Configure(modelBuilder);
 
         }
     }

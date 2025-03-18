@@ -2,8 +2,10 @@
 {
     public class CountryReadDto
     {
-        public string? Name { get; set; }
-        public string? Flag { get; set; }
+        public virtual string? Name { get; set; }
+        public virtual string? Flag { get; set; }
+
+        public virtual List<ProvinceReadDto>? Provinces { get; set; } = new();
 
     }
 }
